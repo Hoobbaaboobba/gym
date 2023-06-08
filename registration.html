@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Регистрация</title>
+</head>
+
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+  <div class="header__container">
+    <ul class="navbar__container">
+      <li class="logo">
+        <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+      </li>
+      <li><a href="clubs.html">Клубы</a></li>
+      <li><a href="abonement.html">Карты</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="#aboutUs">О нас</a></li>
+      <li><a href="shedule.html">Расписание</a></li>
+    </ul>
+    <ul class="number">
+      <li>
+        <img src="img/phone.svg" alt="" />
+        <p class="number">8 977 437 31 21</p>
+      </li>
+      <li>
+        м. ВДНХ,
+        <br />
+        ул. Космонавтов, 10 корпус 1
+      </li>
+      <li id="login_page">
+        <a href="#popup"><img src="img/user.svg" alt="" /></a>
+      </li>
+    </ul>
+    <div id="toggle"></div>
+  </div>
+  <div id="sidebar">
+    <ul>
+      <li><a href="index.html">Гланая</a></li>
+      <li><a href="clubs.html">Клубы</a></li>
+      <li><a href="abonement.html">Карты</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="#aboutUs">О нас</a></li>
+      <li><a href="shedule.html">Расписание</a></li>
+      <br />
+      <li><img src="img/phone.svg" alt="" /></li>
+      <li><a href="#popup"><img src="img/user.svg" alt="" /></a></li>
+      <li style="color: yellow">
+        м. ВДНХ,
+        <br />
+        ул. Космонавтов, 10 корпус 1
+      </li>
+    </ul>
+  </div>
+  <script>
+    const toggle = document.getElementById("toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    document.onclick = function (e) {
+      if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
+        toggle.classList.remove("active");
+        sidebar.classList.remove("active");
+      }
+    };
+
+    toggle.onclick = function () {
+      toggle.classList.toggle("active");
+      sidebar.classList.toggle("active");
+    };
+  </script>
+</header>
+
+<div class="phone_circle">
+  <img src="img/phone2.svg" alt="" />
+</div>
+
+<div class="login_popup" id="popup">
+  <a href="#header" class="close_popup"></a>
+  <div class="popup__section">
+    <div class="popup__container">
+      <a href="#header" class="close_cross">&#9587</a>
+      <h1>Войти в личный кабинет</h1>
+      <input type="text" name="" id="" placeholder="Телефон" />
+      <input type="text" name="" id="" placeholder="Пароль" />
+      <a href="#header"><button>Войти</button></a>
+      <a href="#forget_password">Забыли пароль?</a>
+      <p>
+        Если у вас еще нет пароля для входа, вам нужно
+        <a href="registration.html">зарегистрироваться</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="forget_password" id="forget_password">
+  <a href="#header" class="close_popup"></a>
+  <div class="forget_password__section">
+    <div class="forget_password__container">
+      <a href="#header" class="close_cross">&#9587</a>
+      <h1>Запрос пароля</h1>
+      <input type="text" placeholder="Телефон">
+      <a href="#header"><button>Отправить смс</button></a>
+    </div>
+  </div>
+</div>
+
+    <!-- main -->
+    <section class="registration__section">
+  <div class="registration__container">
+    <h1>Регистрация</h1>
+    <input type="text" placeholder="Телефон" />
+    <input type="text" placeholder="Пароль" />
+    <input type="text" placeholder="Код подтверждения" />
+    <div class="registration-input">
+      <input type="checkbox" name="" id="" />
+      <p>
+        Я ознакомлен с правилами и согласен на
+        <a href="#">обработку персональных данных</a>
+      </p>
+    </div>
+    <a href="index.html"><button>Зарегистрироваться</button></a>
+  </div>
+</section>
+
+    <!-- footer -->
+    <footer class="footer__section" style="position: absolute; bottom: 0; width: 100%;">
+  <div class="footer__container">
+    <div class="footer__box-first">
+      <img src="img/logo.svg" alt="" />
+      <ul class="footer__ul">
+        <li><a href="#">Клубы</a></li>
+        <li><a href="#">Карты</a></li>
+        <li><a href="#">Spa</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Расписание</a></li>
+      </ul>
+    </div>
+    <div class="footer__box-second">
+      <p>
+        м. ВДНХ, <br />
+        ул. Космонавтов, 10 корпус 1
+      </p>
+      <div class="footer__address">
+        <img src="img/phone.svg" alt="" />
+        <p class="number">8 977 437 31 21</p>
+        <img src="img/user.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Карты</title>
+</head>
+
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+  <div class="header__container">
+    <ul class="navbar__container">
+      <li class="logo">
+        <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+      </li>
+      <li><a href="clubs.html">Клубы</a></li>
+      <li><a href="abonement.html">Карты</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="#aboutUs">О нас</a></li>
+      <li><a href="shedule.html">Расписание</a></li>
+    </ul>
+    <ul class="number">
+      <li>
+        <img src="img/phone.svg" alt="" />
+        <p class="number">8 977 437 31 21</p>
+      </li>
+      <li>
+        м. ВДНХ,
+        <br />
+        ул. Космонавтов, 10 корпус 1
+      </li>
+      <li id="login_page">
+        <a href="#popup"><img src="img/user.svg" alt="" /></a>
+      </li>
+    </ul>
+    <div id="toggle"></div>
+  </div>
+  <div id="sidebar">
+    <ul>
+      <li><a href="index.html">Гланая</a></li>
+      <li><a href="clubs.html">Клубы</a></li>
+      <li><a href="abonement.html">Карты</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="#aboutUs">О нас</a></li>
+      <li><a href="shedule.html">Расписание</a></li>
+      <br />
+      <li><img src="img/phone.svg" alt="" /></li>
+      <li><a href="#popup"><img src="img/user.svg" alt="" /></a></li>
+      <li style="color: yellow">
+        м. ВДНХ,
+        <br />
+        ул. Космонавтов, 10 корпус 1
+      </li>
+    </ul>
+  </div>
+  <script>
+    const toggle = document.getElementById("toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    document.onclick = function (e) {
+      if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
+        toggle.classList.remove("active");
+        sidebar.classList.remove("active");
+      }
+    };
+
+    toggle.onclick = function () {
+      toggle.classList.toggle("active");
+      sidebar.classList.toggle("active");
+    };
+  </script>
+</header>
+
+<div class="phone_circle">
+  <img src="img/phone2.svg" alt="" />
+</div>
+
+<div class="login_popup" id="popup">
+  <a href="#header" class="close_popup"></a>
+  <div class="popup__section">
+    <div class="popup__container">
+      <a href="#header" class="close_cross">&#9587</a>
+      <h1>Войти в личный кабинет</h1>
+      <input type="text" name="" id="" placeholder="Телефон" />
+      <input type="text" name="" id="" placeholder="Пароль" />
+      <a href="#header"><button>Войти</button></a>
+      <a href="#forget_password">Забыли пароль?</a>
+      <p>
+        Если у вас еще нет пароля для входа, вам нужно
+        <a href="registration.html">зарегистрироваться</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="forget_password" id="forget_password">
+  <a href="#header" class="close_popup"></a>
+  <div class="forget_password__section">
+    <div class="forget_password__container">
+      <a href="#header" class="close_cross">&#9587</a>
+      <h1>Запрос пароля</h1>
+      <input type="text" placeholder="Телефон">
+      <a href="#header"><button>Отправить смс</button></a>
+    </div>
+  </div>
+</div>
+
+    <!-- main -->
+    <section
+  class="cardsmenu__section"
+  style="
+    background-image: url('img/mainbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  "
+>
+  <div class="cardsmenu__container">
+    <div
+      class="card"
+      style="
+        background-image: url('img/cardsbackground.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <img src="img/familycard.png" alt="" />
+      <p style="text-decoration: underline">Тренажерный зал</p>
+      <p style="text-decoration: underline">Групповые тренировки</p>
+      <p style="text-decoration: underline">Финские сауны и хаммам</p>
+      <p>
+        Тренировки в мини-группах в <br />
+        тренажерном зале
+      </p>
+      <p style="text-decoration: underline">
+        Гостевые визиты до 7 человек за раз
+      </p>
+      <p style="text-decoration: underline; margin-bottom: 140px">
+        Безлимитный доступ во все клубы сети
+      </p>
+      <button>Выбрать</button>
+      <p style="font-size: 20px; position: absolute; bottom: 55px">
+        1990 ₽ в месяц
+      </p>
+    </div>
+    <div
+      class="card"
+      style="
+        background-image: url('img/cardsbackground.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <img src="img/familycard.png" alt="" />
+      <p style="text-decoration: underline">Сейфовая ячейка</p>
+      <p style="text-decoration: underline">Тренажерный зал</p>
+      <p style="text-decoration: underline">Шкаф в раздевалке</p>
+      <p style="text-decoration: underline">Доступ в любое время</p>
+      <p style="text-decoration: underline">Финские сауны и хаммам</p>
+      <p style="text-decoration: underline">
+        Доступ к программам тренировок в мобильном приложении
+      </p>
+      <p style="text-decoration: underline">
+        Гостевые визиты до 4 человек в месяц
+      </p>
+      <p style="text-decoration: underline">
+        Безлимитный доступ во все клубы сети
+      </p>
+      <p style="text-decoration: underline; margin-bottom: 80px">
+        Регулярный анализ состава тела InBody
+      </p>
+      <button>Выбрать</button>
+      <p style="font-size: 20px; position: absolute; bottom: 55px">
+        1990 ₽ в месяц
+      </p>
+    </div>
+    <div
+      class="card"
+      style="
+        background-image: url('img/cardsbackground.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <img src="img/familycard.png" alt="" />
+      <p style="text-decoration: underline">Тренажерный зал</p>
+      <p style="text-decoration: underline">Групповые тренировки</p>
+      <p style="text-decoration: underline">Шкаф в раздевалке</p>
+      <p style="text-decoration: underline">Финские сауны и хаммам</p>
+      <p style="text-decoration: underline">
+        Бесплатная консультация тренера (по <br />
+        предварительной записи)
+      </p>
+      <p style="text-decoration: underline">
+        Доступ к программам тренировок в <br />
+        мобильном приложении
+      </p>
+      <p style="text-decoration: underline">
+        Гостевые визиты до 4 человек в месяц
+      </p>
+      <p style="text-decoration: underline">
+        Безлимитный доступ во все клубы сети
+      </p>
+      <p style="text-decoration: underline; margin-bottom: 60px">
+        Регулярный анализ состава тела InBody
+      </p>
+      <button>Выбрать</button>
+      <p style="font-size: 20px; position: absolute; bottom: 55px">
+        590 ₽ в месяц
+      </p>
+    </div>
+    <div
+      class="card"
+      style="
+        background-image: url('img/cardsbackground.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <img src="img/familycard.png" alt="" />
+      <p style="text-decoration: underline">Тренажерный зал</p>
+      <p style="text-decoration: underline">Групповые тренировки</p>
+      <p style="text-decoration: underline">Шкаф в раздевалке</p>
+      <p style="text-decoration: underline">Финские сауны и хаммам</p>
+      <p style="text-decoration: underline">бесплатные групповые программы</p>
+      <p style="text-decoration: underline">
+        Бесплатная консультация тренера (по <br />
+        предварительной записи)
+      </p>
+      <p style="text-decoration: underline">
+        Доступ к программам тренировок в <br />
+        мобильном приложении
+      </p>
+      <p style="text-decoration: underline">
+        Безлимитный доступ во все клубы сети
+      </p>
+      <p style="text-decoration: underline; margin-bottom: 60px">
+        Регулярный анализ состава тела InBody
+      </p>
+      <button>Выбрать</button>
+      <p style="font-size: 20px; position: absolute; bottom: 55px">
+        590 ₽ в месяц
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- items -->
+    <section class="directions__section">
+  <div class="directions__container">
+    <h1>Направления</h1>
+    <div class="directions__container-items">
+      <div class="directions__container-item">
+        <img src="img/gym1.svg" alt="" />
+      </div>
+      <div class="directions__container-item">
+        <img src="img/gym2.svg" alt="" />
+      </div>
+      <div class="directions__container-item">
+        <img src="img/gym3.svg" alt="" />
+      </div>
+      <div class="directions__container-item">
+        <img src="img/gym4.svg" alt="" />
+      </div>
+      <div class="directions__container-item">
+        <img src="img/gym5.svg" alt="" />
+      </div>
+      <div class="directions__container-item">
+        <img src="img/gym6.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- feedback -->
+    <section class="feedback__section">
+  <div class="feedback__container">
+    <div class="feedback__form">
+      <h1 style="font-size: 700">СВЯЖИТЕСЬ С НАМИ</h1>
+      <p>Оставьте свои контактные данные,мы свяжемся с вами в рабочее время</p>
+      <div class="feedback_input">
+        <p>Ваше имя</p>
+        <input type="text" />
+      </div>
+      <div class="feedback_input">
+        <p>Ваше номер телефон</p>
+        <input type="text" />
+      </div>
+      <button>Оправить</button>
+    </div>
+    <div class="feedback__img">
+      <img src="img/requestphoto.png" alt="" />
+    </div>
+  </div>
+</section>
+
+    <!-- aboutUs -->
+    <section class="aboutus__section" id="aboutUs">
+  <div class="aboutUs__container">
+    <h1>О НАС</h1>
+    <p>
+      <span style="font-weight: bold">НАДЕЖНОСТЬ И РЕПУТАЦИЯ</span>
+      <br />
+      Рельеф – самая разветвленная сеть фитнес-клубов России: в сети более 90
+      клубов. С нами вы можете быть уверены в безопасности своего здоровья –
+      дипломированный тренерский состав всегда к вашим услугам. Наши клиенты
+      весьма разноплановые люди: профессиональные спортсмены, медийные персоны,
+      менеджеры высшего и среднего звена, творческие личности и домохозяйки – и
+      к каждому из них у нас индивидуальный подход, соответствующий самым
+      требовательным запросам. Свыше 350 000 человек являются клиентами сети.
+      <br />
+      УНИВЕРСАЛЬНОСТЬ
+      <br />
+      Мы предлагаем своим клиентам не только современные и уникальные для нашей
+      страны фитнес-программы, но и возможность погрузиться в атмосферу
+      здорового образа жизни практически любому человеку, даже не имеющему опыта
+      тренировок. Рельеф – это сеть универсальных спортивно-оздоровительных
+      комплексов, предлагающих весь спектр фитнес-услуг на уровне мировых
+      стандартов:
+      <br />
+      - фитнес и разнообразные групповые занятия для взрослых и детей;
+      <br />
+      - салоны красоты & spa;
+      <br />
+      - сауны и парные;
+      <br />
+      - бары с самым разнообразным меню;
+      <br />
+      - бассейны с морской водой.
+    </p>
+  </div>
+</section>
+
+    <!-- footer -->
+    <footer class="footer__section">
+  <div class="footer__container">
+    <div class="footer__box-first">
+      <img src="img/logo.svg" alt="" />
+      <ul class="footer__ul">
+        <li><a href="#">Клубы</a></li>
+        <li><a href="#">Карты</a></li>
+        <li><a href="#">Spa</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Расписание</a></li>
+      </ul>
+    </div>
+    <div class="footer__box-second">
+      <p>
+        м. ВДНХ, <br />
+        ул. Космонавтов, 10 корпус 1
+      </p>
+      <div class="footer__address">
+        <img src="img/phone.svg" alt="" />
+        <p class="number">8 977 437 31 21</p>
+        <img src="img/user.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  const state = {};
+  const carouselList = document.querySelector(".carousel__list");
+  const carouselItems = document.querySelectorAll(".carousel__item");
+  const elems = Array.from(carouselItems);
+
+  carouselList.addEventListener("click", function (event) {
+    var newActive = event.target;
+    var isItem = newActive.closest(".carousel__item");
+
+    if (!isItem || newActive.classList.contains("carousel__item_active")) {
+      return;
+    }
+
+    update(newActive);
+  });
+
+  const update = function (newActive) {
+    const newActivePos = newActive.dataset.pos;
+
+    const current = elems.find((elem) => elem.dataset.pos == 0);
+    const prev = elems.find((elem) => elem.dataset.pos == -1);
+    const next = elems.find((elem) => elem.dataset.pos == 1);
+    const first = elems.find((elem) => elem.dataset.pos == -2);
+    const last = elems.find((elem) => elem.dataset.pos == 2);
+
+    current.classList.remove("carousel__item_active");
+
+    [current, prev, next, first, last].forEach((item) => {
+      var itemPos = item.dataset.pos;
+
+      item.dataset.pos = getPos(itemPos, newActivePos);
+    });
+  };
+
+  const getPos = function (current, active) {
+    const diff = current - active;
+
+    if (Math.abs(current - active) > 2) {
+      return -current;
+    }
+
+    return diff;
+  };
+</script>
+
+  </body>
+</html>
